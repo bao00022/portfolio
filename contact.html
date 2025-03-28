@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo of Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body> 
+    <!-- The header always take up the entire frame. -->
+    <header class="bg-96b7b9">
+        <div class="d-flex align-items-center px-3 px-md-5 py-3">
+            <div>
+                <img src="./images/logo.svg" alt="logo" class="img-fluid">
+            </div>
+            <!-- It only displays on a small screen. -->
+            <div class="d-md-none ms-auto">
+                <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px">
+            </div>
+            <!-- It displays on the medium and the large screen. -->
+             <nav class="d-md-flex d-none gap-5 ms-auto">
+                <!-- The max value of gap is 5. -->
+                <a href="./index.html" class="text-black text-decoration-none me-5">Home</a>
+                <a href="./about.html" class="text-black text-decoration-none me-5">About</a>
+                <a href="./contact.html" class="text-black text-decoration-none">Contact</a>
+             </nav>
+         </div>       
+    </header>
+
+    <!-- The main part is responsive. -->
+    <main>
+       
+        
+
+        
+    </main>
+    <!-- The footer always take up the entire frame. -->
+    <footer class="bg-96b7b9">
+        <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
+            <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
+            <nav class="d-flex gap-5 fs-4 fs-md-6">
+                <a href="./index.html" class="text-black text-decoration-none">Home</a>
+                <a href="./about.html" class="text-black text-decoration-none">About</a>
+                <a href="./contact.html" class="text-black text-decoration-none">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
