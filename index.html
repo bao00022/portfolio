@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo of Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
     <!-- The header always take up the entire frame. -->
-    <header class="bg-96b7b9">
+    <header class="bg-header-footer">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
             <div>
                 <img src="./images/logo.svg" alt="logo" class="img-fluid">
@@ -32,62 +32,67 @@
     <!-- The main part is responsive. -->
     <main>
         <!-- Banner part. -->
-        <div class="container-md px-1 py-4">
-            <div class="row">
-                <div class="col-md-4 order-md-2 d-flex align-items-center justify-content-center">
-                    <picture>
-                        <source media="(min-width: 992px)" srcset="./images/banner-lg.webp">
-                        <source media="(min-width: 768px)" srcset="./images/banner-md.webp">
-                        <img src="./images/banner-sm.webp" alt="banner" class="img-fluid">
-                        <!-- Added img-fluid class to the <img> tag, to set max-width: 100% to ensure the image does not exceed the width of the parent container. -->
-                    </picture>
+        <div class="container-fluid bg-secondary-custom px-1 py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 order-md-2 d-flex align-items-center justify-content-center">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/banner-md.webp">
+                            <img src="./images/banner-sm.webp" alt="banner" class="img-fluid">
+                            <!-- Added img-fluid class to the <img> tag, to set max-width: 100% to ensure the image does not exceed the width of the parent container. -->
+                        </picture>
+                    </div>
+                    <div class="col-md-8 order-md-1">
+                        <h1 class="display-1 font-cormorant">Simplify Process, Amplify Impact</h1>
+                        <p class="fs-6 fs-lg-4"><span class="fw-bold">I'm Ada,</span> pecializing in Seamless Design & Development for Exceptional Digital Experiences.</p>
+                    </div>
                 </div>
-                <div class="col-md-8 order-md-1">
-                    <h1 class="display-1 font-cormorant">Simplify Process, Amplify Impact</h1>
-                    <p class="fs-6 fs-lg-4"><span class="fw-bold">I'm Ada,</span>pecializing in Seamless Design & Development for Exceptional Digital Experiences.</p>
+                <div class="row">
+                    <div class="col py-2 my-3">
+                        <a href="./about.html" class="text-white px-4 py-2 bg-button text-decoration-none">Let's start!</a>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col py-2 my-3">
-                    <a href="./about.html" class="text-white px-4 py-2 bg-0D8A98 text-decoration-none">Let's start!</a>
-                </div>
-            </div>
+            
         </div>
         <!-- Portfolio part. -->
-        <div class="container-fluid bg-CAE9EC">
+        <div class="container-fluid bg-primary-custom">
             <h2 class="display-2 text-center font-cormorant py-4">Portfolio</h2>
             <div class="container pb-4">
                 <div class="row">
                     <div class="col-md-4 px-5 px-md-3 d-flex flex-column gap-2 justify-content-between">
-                        <!-- It seems use the large edtion is better. -->
-                        <!-- <picture>
-                            <source media="(min-width: 992x)" srcset="./images/design-lg.webp">
+                        <picture>
                             <source media="(min-width: 768x)" srcset="./images/design-md.webp">
                             <img src="./images/design-md.webp" alt="design picture" class="img-fluid">
-                        </picture> -->
-                        <img src="./images/design-lg.webp" alt="design picture" class="img-fluid">
+                        </picture>
                         <h3>Design</h3>
                         <p class="flex-grow-1">Embrace simplicity, creating clean and intuitive experiences that enhance usability.</p>
                         <div class="mt-2 mb-5">
-                            <a href="https://www.figma.com/design/Bm2UaLyNMCNUIZhhNKhJlU/bao-yan-a02?node-id=0-1&p=f&t=IhBgsbN1XIvZveKL-0" target=_blank class="py-1 px-4 border border-2 border-dark bg-CAE9EC text-decoration-none text-black">View</a>
+                            <a href="https://www.figma.com/design/Bm2UaLyNMCNUIZhhNKhJlU/bao-yan-a02?node-id=0-1&p=f&t=IhBgsbN1XIvZveKL-0" target=_blank class="py-1 px-4 border border-2 border-dark bg-primary-custom text-decoration-none text-black">View</a>
                         </div>
                     </div>
 
                     <div class="col-md-4  px-5 px-md-3 d-flex flex-column gap-2 justify-content-between">
-                        <img src="./images/photograph-lg.webp" alt="photograph picture" class="img-fluid">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/photograph-md.webp">
+                            <img src="./images/photograph-sm.webp" alt="photograph picture" class="img-fluid">
+                        </picture>
                         <h3>Photograph</h3>
                         <p class="flex-grow-1">Capture diverse subjects, from architecture and everyday life to people and events.</p>
                         <div class="mt-2 mb-5">
-                            <a href="https://bao00022.myportfolio.com/life" target=_blank class="py-1 px-4 border border-2 border-dark bg-CAE9EC text-decoration-none text-black">View</a>
+                            <a href="https://bao00022.myportfolio.com/life" target=_blank class="py-1 px-4 border border-2 border-dark bg-primary-custom text-decoration-none text-black">View</a>
                         </div>
                     </div>
 
                     <div class="col-md-4  px-5 px-md-3 d-flex flex-column gap-2 justify-content-between">
-                        <img src="./images/coding-lg.webp" alt="coding picture" class="img-fluid">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/coding-md.webp">
+                            <img src="./images/coding-sm.webp" alt="coding picture" class="img-fluid">
+                        </picture>
                         <h3>Coding</h3>
                         <p class="flex-grow-1">Prioritize efficiency, developing scalable and high-performance solutions.</p>
                         <div class="mt-2 mb-5">
-                            <a href="https://github.com/bao00022/bao00022.github.io" target=_blank class="py-1 px-4 border border-2 border-dark bg-CAE9EC text-decoration-none text-black">View</a>
+                            <a href="https://github.com/bao00022/bao00022.github.io" target=_blank class="py-1 px-4 border border-2 border-dark bg-primary-custom text-decoration-none text-black">View</a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +100,7 @@
          </div>
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-96b7b9">
+    <footer class="bg-header-footer">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
             <nav class="d-flex gap-5 fs-4 fs-md-6">

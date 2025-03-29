@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo of Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
     <!-- The header always take up the entire frame. -->
-    <header class="bg-96b7b9">
+    <header class="bg-header-footer">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
             <div>
                 <img src="./images/logo.svg" alt="logo" class="img-fluid">
@@ -30,14 +30,58 @@
     </header>
 
     <!-- The main part is responsive. -->
-    <main>
-       
-        
+    <main class="bg-secondary-custom py-5">
+       <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="font-cormorant">Let’s chat and craft a user experience tailored to you.</h1>
+                    <div class="d-flex justify-content-center align-items-center gap-4 py-4">
+                        <a href="https://www.facebook.com/"><img src="./images/facebook.svg" alt=""></a>
+                        <a href="https://www.instagram.com/"><img src="./images/instgram.svg" alt=""></a>
+                        <a href="https://www.tiktok.com/en/"><img src="./images/tiktok.svg" alt=""></a>
+                    </div>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="./images/hands-md.webp">
+                    <img src="./images/hands-sm.webp" alt="picture symbolize cooperation" class="img-fluid">
+                    </picture>                 
+                </div>
+                <div class="col-md-6 border border-1 bg-white p-4">
+                    <h2 class="text-center fw-light py-4">Start an conversation</h2>
 
-        
+                    <form class="d-flex flex-column">
+                        <div class="d-flex gap-2">
+                            <div class="flex-grow-1">
+                                <label for="fname" class="form-label">First Name</label>
+                                <input type="text" id="fname" class="form-control">
+                            </div>
+                            <div class="flex-grow-1">
+                                <label for="lname" class="form-label">Last Name</label>
+                                <input type="text" id="lname" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                        <label for="subjects" class="form-label">Subjects</label>
+                        <input type="text" class="form-control" id="subjects">
+                        </div>
+                        <div>
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="border-0 px-4 py-1 bg-button text-white mt-4">Submit</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </div> 
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-96b7b9">
+    <footer class="bg-header-footer">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
             <nav class="d-flex gap-5 fs-4 fs-md-6">

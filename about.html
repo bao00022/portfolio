@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo of Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
     <!-- The header always take up the entire frame. -->
-    <header class="bg-96b7b9">
+    <header class="bg-header-footer">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
             <div>
                 <img src="./images/logo.svg" alt="logo" class="img-fluid">
@@ -31,14 +31,67 @@
 
     <!-- The main part is responsive. -->
     <main>
-        
+        <!-- Use the combination of flex and column. -->
+        <div class="container-fluid bg-secondary-custom">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/about-md.webp">
+                            <img src="./images/about-sm.webp" alt="portrait of  the designer" class="img-fluid">
+                        </picture>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center align-items-center gap-md-3">
+                        <h2 class="mt-4">Hi, I'm Ada</h2>
+                        <h1 class="font-cormorant">UX Design and Coder</h1>
+                        <p>Self-motivated and detail oriented, I’m eager to implement designs through code to deliver seamless and engaging user experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 offset-3 col-md-4 offset-md-1">
+                        <!-- The original picture is small. So there is no need to change to three edition. -->
+                        <source media="(min-width: 768px)" srcset="./images/ideas-md.webp">
+                        <img src="./images/ideas-sm.webp" alt="picture symbolize creation" class="img-fluid">
+                    </div>
+                    <div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
+                        <h3 class="font-cormorant-normal">Design Service</h3>
+                        <ul>
+                            <li>Design logos, websites, presentations, and promotional materials.</li>
+                            <li>Enhance UI/UX by analyzing user needs and improving usability.</li>
+                            <li>Develop solutions to optimize business processes and efficiency.</li>
+                            <li>Address market pain points with effective design strategies.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 offset-3 col-md-4 offset-md-1 order-md-1">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="./images/computer-md.webp">
+                            <img src="./images/computer-sm.webp" alt="picture symbolize coding" class="img-fluid">
+                        </picture>
+                    </div>
+                    <div class="col-md-6 d-flex flex-column justify-content-center">
+                        <h3 class="font-cormorant-normal">Coding Service</h3>
+                        <ul>
+                            <li>Develop custom websites and full-stack web applications.</li>
+                            <li>Build and integrate APIs, optimize system architecture, and implement microservices solutions.</li>
+                            <li>Enhance backend performance with server-side development and architecture optimization.</li>
+                            <li>Provide tech stack guidance, code reviews, security analysis, and DevOps best practices.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-        
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-96b7b9">
+    <footer class="bg-header-footer">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
             <nav class="d-flex gap-5 fs-4 fs-md-6">
