@@ -10,17 +10,17 @@
 </head>
 <body> 
     <!-- The header always take up the entire frame. -->
-    <header class="bg-header-footer">
+    <header class="bg-header-footer" role="banner">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
             <div>
-                <img src="./images/logo.svg" alt="logo" class="img-fluid">
+                <img src="./images/logo.svg" alt="logo" class="img-fluid" aria-label="echo of design logo">
             </div>
             <!-- It only displays on a small screen. -->
             <div class="d-md-none ms-auto">
                 <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px">
             </div>
             <!-- It displays on the medium and the large screen. -->
-             <nav class="d-md-flex d-none gap-5 ms-auto">
+             <nav class="d-md-flex d-none gap-5 ms-auto" role="navigation" aria-label="main navigation">
                 <!-- The max value of gap is 5. -->
                 <a href="./index.html" class="text-black text-decoration-none me-5">Home</a>
                 <a href="./about.html" class="text-black text-decoration-none me-5">About</a>
@@ -30,50 +30,50 @@
     </header>
 
     <!-- The main part is responsive. -->
-    <main class="bg-secondary-custom py-5">
+    <main class="bg-secondary-custom py-5" role="main" itemscope itemtype="https://schema.org/ContactPage">
        <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="font-cormorant">Let’s chat and craft a user experience tailored to you.</h1>
-                    <div class="d-flex justify-content-center align-items-center gap-4 py-4">
-                        <a href="https://www.facebook.com/"><img src="./images/facebook.svg" alt=""></a>
-                        <a href="https://www.instagram.com/"><img src="./images/instgram.svg" alt=""></a>
-                        <a href="https://www.tiktok.com/en/"><img src="./images/tiktok.svg" alt=""></a>
+                    <h1 class="font-cormorant" aria-label="welcom message" itemprop="headline">Let’s chat and craft a user experience tailored to you.</h1>
+                    <div class="d-flex justify-content-center align-items-center gap-4 py-4" aria-label="social media links">
+                        <a href="https://www.facebook.com/" aria-label="Visit my facebook page" itemprop="sameAs"><img src="./images/facebook.svg" alt="facebook icon"></a>
+                        <a href="https://www.instagram.com/" aria-label="Visit my instagram page" itemprop="sameAs"><img src="./images/instgram.svg" alt="instagram icon"></a>
+                        <a href="https://www.tiktok.com/en/" aria-label="Visit my tiktok page" itemprop="sameAs"><img src="./images/tiktok.svg" alt="tiktok icon"></a>
                     </div>
                     <picture>
                         <source media="(min-width: 768px)" srcset="./images/hands-md.webp">
-                    <img src="./images/hands-sm.webp" alt="picture symbolize cooperation" class="img-fluid">
+                    <img src="./images/hands-sm.webp" alt="picture symbolize cooperation" class="img-fluid" itemprop="image">
                     </picture>                 
                 </div>
-                <div class="col-md-6 border border-1 bg-white p-4">
+                <div class="col-md-6 border border-1 bg-white p-4" role="form" aria-label="contact form">
                     <h2 class="text-center fw-light py-4">Start an conversation</h2>
 
-                    <form class="d-flex flex-column">
+                    <form class="d-flex flex-column" itemprop="contactOption" itemscope itemtype="https://schema.org/ContactOption">
                         <div class="d-flex gap-2">
                             <div class="flex-grow-1">
                                 <label for="fname" class="form-label">First Name</label>
-                                <input type="text" id="fname" class="form-control">
+                                <input type="text" id="fname" class="form-control" aria-required="true">
                             </div>
                             <div class="flex-grow-1">
                                 <label for="lname" class="form-label">Last Name</label>
-                                <input type="text" id="lname" class="form-control">
+                                <input type="text" id="lname" class="form-control" aria-required="true">
                             </div>
                         </div>
 
                         <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" itemprop="email">
                         </div>
                         <div class="mb-3">
                         <label for="subjects" class="form-label">Subjects</label>
-                        <input type="text" class="form-control" id="subjects">
+                        <input type="text" class="form-control" id="subjects" aria-required="true">
                         </div>
                         <div>
                             <label for="message" class="form-label">Message</label>
                             <textarea id="message" class="form-control" aria-label="With textarea"></textarea>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="border-0 px-4 py-1 bg-button text-white mt-4">Submit</button>
+                            <button type="submit" class="border-0 px-4 py-1 bg-button text-white mt-4" aria-label="submit form">Submit</button>
                         </div> 
                     </form>
                 </div>
@@ -81,10 +81,10 @@
         </div> 
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-header-footer">
+    <footer class="bg-header-footer" role="contentinfo">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
-            <nav class="d-flex gap-5 fs-4 fs-md-6">
+            <nav class="d-flex gap-5 fs-4 fs-md-6" role="navigation" aria-label="footer navigation">
                 <a href="./index.html" class="text-black text-decoration-none">Home</a>
                 <a href="./about.html" class="text-black text-decoration-none">About</a>
                 <a href="./contact.html" class="text-black text-decoration-none">Contact</a>

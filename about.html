@@ -10,17 +10,17 @@
 </head>
 <body> 
     <!-- The header always take up the entire frame. -->
-    <header class="bg-header-footer">
+    <header class="bg-header-footer" role="banner">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
             <div>
-                <img src="./images/logo.svg" alt="logo" class="img-fluid">
+                <img src="./images/logo.svg" alt="logo" class="img-fluid" aria-label="echo of design logo">
             </div>
             <!-- It only displays on a small screen. -->
             <div class="d-md-none ms-auto">
-                <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px">
+                <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px" aria-label="menu button">
             </div>
             <!-- It displays on the medium and the large screen. -->
-             <nav class="d-md-flex d-none gap-5 ms-auto">
+             <nav class="d-md-flex d-none gap-5 ms-auto" role="navigation" aria-label="main navigation">
                 <!-- The max value of gap is 5. -->
                 <a href="./index.html" class="text-black text-decoration-none me-5">Home</a>
                 <a href="./about.html" class="text-black text-decoration-none me-5">About</a>
@@ -30,9 +30,9 @@
     </header>
 
     <!-- The main part is responsive. -->
-    <main>
+    <main id="main-content" role="main" itemscope itemtype="https://schema.org/Person">
         <!-- Use the combination of flex and column. -->
-        <div class="container-fluid bg-secondary-custom">
+        <div class="container-fluid bg-secondary-custom" aria-label="introduction section">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -42,24 +42,24 @@
                         </picture>
                     </div>
                     <div class="col-md-6 d-flex flex-column justify-content-center align-items-center gap-md-3">
-                        <h2 class="mt-4">Hi, I'm Ada</h2>
-                        <h1 class="font-cormorant">UX Design and Coder</h1>
+                        <h2 class="mt-4" itemprop="givenName">Hi, I'm Ada</h2>
+                        <h1 class="font-cormorant" itemprop="jobTitle">UX Design and Coder</h1>
                         <p>Self-motivated and detail oriented, I’m eager to implement designs through code to deliver seamless and engaging user experiences.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" aria-label="services section">
             <div class="container">
-                <div class="row">
+                <div class="row" role="article" aria-label="design services">
                     <div class="col-6 offset-3 col-md-4 offset-md-1">
                         <!-- The original picture is small. So there is no need to change to three edition. -->
                         <source media="(min-width: 768px)" srcset="./images/ideas-md.webp">
                         <img src="./images/ideas-sm.webp" alt="picture symbolize creation" class="img-fluid">
                     </div>
                     <div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
-                        <h3 class="font-cormorant-normal">Design Service</h3>
-                        <ul>
+                        <h3 class="font-cormorant-normal" itemprop="name">Design Service</h3>
+                        <ul itemprop="description">
                             <li>Design logos, websites, presentations, and promotional materials.</li>
                             <li>Enhance UI/UX by analyzing user needs and improving usability.</li>
                             <li>Develop solutions to optimize business processes and efficiency.</li>
@@ -67,7 +67,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" role="article" aria-label="coding services" itemscope itemtype="https://schema.org/Service">
                     <div class="col-6 offset-3 col-md-4 offset-md-1 order-md-1">
                         <picture>
                             <source media="(min-width: 768px)" srcset="./images/computer-md.webp">
@@ -75,8 +75,8 @@
                         </picture>
                     </div>
                     <div class="col-md-6 d-flex flex-column justify-content-center">
-                        <h3 class="font-cormorant-normal">Coding Service</h3>
-                        <ul>
+                        <h3 class="font-cormorant-normal" itemprop="name">Coding Service</h3>
+                        <ul itemprop="description">
                             <li>Develop custom websites and full-stack web applications.</li>
                             <li>Build and integrate APIs, optimize system architecture, and implement microservices solutions.</li>
                             <li>Enhance backend performance with server-side development and architecture optimization.</li>
@@ -86,15 +86,12 @@
                 </div>
             </div>
         </div>
-
-
-
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-header-footer">
+    <footer class="bg-header-footer" role="contentinfo">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
-            <nav class="d-flex gap-5 fs-4 fs-md-6">
+            <nav class="d-flex gap-5 fs-4 fs-md-6" role="navigation" aria-label="footer navigation">
                 <a href="./index.html" class="text-black text-decoration-none">Home</a>
                 <a href="./about.html" class="text-black text-decoration-none">About</a>
                 <a href="./contact.html" class="text-black text-decoration-none">Contact</a>
