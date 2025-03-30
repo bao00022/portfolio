@@ -15,19 +15,24 @@ Final Project – Web Portfolio
   - Used as the primary display font for headings
   - Imported via: `<link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">`
 
+ ### CSS Libraries
+- [Bootstrap](https://getbootstrap.com/) - Main CSS framework
+- [Animate.css](https://animate.style/) - Animation library
+  - Used for various page animations:
+    - `animate__fadeIn` for smooth content appearance
+    - `animate__fadeInLeft` for text sliding in from left
+    - `animate__bounce` for attention-grabbing elements
+  - Imported via: `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">`
+
+
+### Icons
+- Social media icons are exported as SVG from [Font Awesome](https://fontawesome.com/)
+  - Facebook, Instagram, and TikTok icons
+  - Used as static SVG files rather than Font Awesome library
+
+
 ### Image Credits
 The design and coding images in the portfolio section are sourced from [Pixabay](https://pixabay.com/).
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Development Notes

@@ -66,3 +66,43 @@ h3 {
         font-size: 1rem !important;
     }
 }
+
+.skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skip-links a{
+    position: absolute;
+    top: -3em;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.skip-links a:focus{
+  top: 0;
+}
+
+/* #mobile-navigation {
+    display: none;
+}
+
+#mobile-navigation.show {
+    display: block;
+} */
+/* Base styles for the mobile navigation */
+#mobile-navigation {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 200px;
+    border-radius: 4px;
+  }
+  
+  

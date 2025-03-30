@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo of Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
+     <!-- Set skip links. -->
+     <ul role="list" class="skip-links">
+        <li role="listitem"><a href="#navigation">navigation</a></li>
+        <li role="listitem"><a href="#about-me">about me</a></li>
+        <li role="listitem"><a href="#design-service">desing service</a></li>
+        <li role="listitem"><a href="#coding-service">coding service</a></li>
+        <li role="listitem"><a href="#footer">footer</a></li>
+    </ul>
+
+
     <!-- The header always take up the entire frame. -->
     <header class="bg-header-footer" role="banner">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
@@ -16,11 +27,18 @@
                 <img src="./images/logo.svg" alt="logo" class="img-fluid" aria-label="echo of design logo">
             </div>
             <!-- It only displays on a small screen. -->
-            <div class="d-md-none ms-auto">
-                <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px" aria-label="menu button">
+            <div class="dropdown d-md-none ms-auto">
+                <button class="border-0 bg-header-footer" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px" aria-label="menu button">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="./about.html">About</a></li>
+                    <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                  </ul>
             </div>
             <!-- It displays on the medium and the large screen. -->
-             <nav class="d-md-flex d-none gap-5 ms-auto" role="navigation" aria-label="main navigation">
+             <nav id="navigation" class="d-md-flex d-none gap-5 ms-auto" role="navigation" aria-label="main navigation">
                 <!-- The max value of gap is 5. -->
                 <a href="./index.html" class="text-black text-decoration-none me-5">Home</a>
                 <a href="./about.html" class="text-black text-decoration-none me-5">About</a>
@@ -42,8 +60,8 @@
                         </picture>
                     </div>
                     <div class="col-md-6 d-flex flex-column justify-content-center align-items-center gap-md-3">
-                        <h2 class="mt-4" itemprop="givenName">Hi, I'm Ada</h2>
-                        <h1 class="font-cormorant" itemprop="jobTitle">UX Design and Coder</h1>
+                        <h2 id="about-me" class="mt-4 animate__animated animate__fadeIn" itemprop="givenName">Hi, I'm Ada</h2>
+                        <h1 class="font-cormorant animate__animated animate__fadeIn" itemprop="jobTitle">UX Design and Coder</h1>
                         <p>Self-motivated and detail oriented, I’m eager to implement designs through code to deliver seamless and engaging user experiences.</p>
                     </div>
                 </div>
@@ -58,7 +76,7 @@
                         <img src="./images/ideas-sm.webp" alt="picture symbolize creation" class="img-fluid">
                     </div>
                     <div class="col-md-6 offset-md-1 d-flex flex-column justify-content-center">
-                        <h3 class="font-cormorant-normal" itemprop="name">Design Service</h3>
+                        <h3 id="design-service" class="font-cormorant-normal" itemprop="name">Design Service</h3>
                         <ul itemprop="description">
                             <li>Design logos, websites, presentations, and promotional materials.</li>
                             <li>Enhance UI/UX by analyzing user needs and improving usability.</li>
@@ -75,7 +93,7 @@
                         </picture>
                     </div>
                     <div class="col-md-6 d-flex flex-column justify-content-center">
-                        <h3 class="font-cormorant-normal" itemprop="name">Coding Service</h3>
+                        <h3 id="coding-service" class="font-cormorant-normal" itemprop="name">Coding Service</h3>
                         <ul itemprop="description">
                             <li>Develop custom websites and full-stack web applications.</li>
                             <li>Build and integrate APIs, optimize system architecture, and implement microservices solutions.</li>
@@ -88,7 +106,7 @@
         </div>
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-header-footer" role="contentinfo">
+    <footer id="footer" class="bg-header-footer" role="contentinfo">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
             <nav class="d-flex gap-5 fs-4 fs-md-6" role="navigation" aria-label="footer navigation">

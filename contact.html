@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo of Design</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body> 
+    <!-- Set skip links. -->
+    <ul role="list" class="skip-links">
+        <li role="listitem"><a href="#navigation">navigation</a></li>
+        <li role="listitem"><a href="#conversation-form">conversation form</a></li>
+        <li role="listitem"><a href="#footer">footer</a></li>
+    </ul>
+
+
     <!-- The header always take up the entire frame. -->
     <header class="bg-header-footer" role="banner">
         <div class="d-flex align-items-center px-3 px-md-5 py-3">
@@ -16,11 +25,18 @@
                 <img src="./images/logo.svg" alt="logo" class="img-fluid" aria-label="echo of design logo">
             </div>
             <!-- It only displays on a small screen. -->
-            <div class="d-md-none ms-auto">
-                <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px">
+            <div class="dropdown d-md-none ms-auto">
+                <button class="border-0 bg-header-footer" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./images/bars.svg" alt="bars" class="img-fluid w-25px" aria-label="menu button">
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="./about.html">About</a></li>
+                    <li><a class="dropdown-item" href="./contact.html">Contact</a></li>
+                  </ul>
             </div>
             <!-- It displays on the medium and the large screen. -->
-             <nav class="d-md-flex d-none gap-5 ms-auto" role="navigation" aria-label="main navigation">
+             <nav id="#navigation" class="d-md-flex d-none gap-5 ms-auto" role="navigation" aria-label="main navigation">
                 <!-- The max value of gap is 5. -->
                 <a href="./index.html" class="text-black text-decoration-none me-5">Home</a>
                 <a href="./about.html" class="text-black text-decoration-none me-5">About</a>
@@ -34,11 +50,11 @@
        <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="font-cormorant" aria-label="welcom message" itemprop="headline">Let’s chat and craft a user experience tailored to you.</h1>
+                    <h1 class="font-cormorant animate__animated animate__bounce" aria-label="welcom message" itemprop="headline">Let’s chat and craft a user experience tailored to you.</h1>
                     <div class="d-flex justify-content-center align-items-center gap-4 py-4" aria-label="social media links">
-                        <a href="https://www.facebook.com/" aria-label="Visit my facebook page" itemprop="sameAs"><img src="./images/facebook.svg" alt="facebook icon"></a>
-                        <a href="https://www.instagram.com/" aria-label="Visit my instagram page" itemprop="sameAs"><img src="./images/instgram.svg" alt="instagram icon"></a>
-                        <a href="https://www.tiktok.com/en/" aria-label="Visit my tiktok page" itemprop="sameAs"><img src="./images/tiktok.svg" alt="tiktok icon"></a>
+                        <a href="https://www.facebook.com/" aria-label="Visit my facebook page" itemprop="sameAs"><img src="./images/facebook.svg" alt="facebook icon" width="30" height="30"></a>
+                        <a href="https://www.instagram.com/" aria-label="Visit my instagram page" itemprop="sameAs"><img src="./images/instgram.svg" alt="instagram icon" width="30" height="30"></a>
+                        <a href="https://www.tiktok.com/en/" aria-label="Visit my tiktok page" itemprop="sameAs"><img src="./images/tiktok.svg" alt="tiktok icon" width="30" height="30"></a>
                     </div>
                     <picture>
                         <source media="(min-width: 768px)" srcset="./images/hands-md.webp">
@@ -48,7 +64,7 @@
                 <div class="col-md-6 border border-1 bg-white p-4" role="form" aria-label="contact form">
                     <h2 class="text-center fw-light py-4">Start an conversation</h2>
 
-                    <form class="d-flex flex-column" itemprop="contactOption" itemscope itemtype="https://schema.org/ContactOption">
+                    <form id="#conversation-form" class="d-flex flex-column" itemprop="contactOption" itemscope itemtype="https://schema.org/ContactOption">
                         <div class="d-flex gap-2">
                             <div class="flex-grow-1">
                                 <label for="fname" class="form-label">First Name</label>
@@ -62,7 +78,7 @@
 
                         <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" itemprop="email">
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3">
                         <label for="subjects" class="form-label">Subjects</label>
@@ -81,7 +97,7 @@
         </div> 
     </main>
     <!-- The footer always take up the entire frame. -->
-    <footer class="bg-header-footer" role="contentinfo">
+    <footer id="footer" class="bg-header-footer" role="contentinfo">
         <div class="container d-flex flex-column flex-md-row align-items-center gap-3 justify-content-between py-5">
             <p class="order-1 order-md-0 fs-4 fs-md-6">©2025 echoofdesign</p>
             <nav class="d-flex gap-5 fs-4 fs-md-6" role="navigation" aria-label="footer navigation">
