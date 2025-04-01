@@ -55,6 +55,13 @@ h3 {
     color: var(--text-brand);
 }
 
+.font-cormorant-black {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
 @media (min-width: 992px) {
     .fs-lg-4 {
         font-size: calc(1.275rem + 0.3vw) !important;
